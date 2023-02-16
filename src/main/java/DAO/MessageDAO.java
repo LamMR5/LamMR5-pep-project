@@ -112,6 +112,29 @@ public class MessageDAO {
         return null;
     }
 
+//     public List<Message> getMessagesByAccountId(int account_id){
+//         Connection connection = ConnectionUtil.getConnection();
+//         try {
+//             //Write SQL logic here
+//             String sql = "SELECT * FROM message WHERE =?";
+//             PreparedStatement preparedStatement = connection.prepareStatement(sql);
+// d
+//             //write preparedStatement's setInt method here.
+//             preparedStatement.setInt(1, message_id);
+//             ResultSet rs = preparedStatement.executeQuery();
+//             if(rs.next()){
+                
+//                 return new Message(
+//                         rs.getInt("message_id"),
+//                         rs.getInt("posted_by"),
+//                         rs.getString("message_text"),
+//                         rs.getLong("time_posted_epoch")) ;
+//             }
+//         }catch(SQLException e){
+//             System.out.println(e.getMessage());
+//         }
+//         return null;
+//     }
 
 
 

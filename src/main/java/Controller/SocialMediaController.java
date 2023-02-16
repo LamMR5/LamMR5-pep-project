@@ -38,6 +38,7 @@ public class SocialMediaController {
         app.post("/messages", this::createMessageHandler);
         app.get("/messages", this::getAllMessageHandler);
         app.get("/accounts/{account_id}", this::getAccountByIdHandler);
+        // app.get("/accounts/{account_id}/messages", this::getMessagesByAccountIdHandler)
         
         return app;
     }
@@ -107,4 +108,10 @@ public class SocialMediaController {
             Account account = mapper.readValue(ctx.body(), Account.class);
             ctx.json(accountService.getAccountById(account.getAccount_id()));
         }
+
+        // private void getMessagesByAccountIdHandler(Context ctx) throws JsonProcessingException {
+        //     ObjectMapper mapper = new ObjectMapper();
+        //     int account_id = Integer.parseInt(ctx.pathParam("account_id"));
+        //     ctx.json(messageService.getMessagesByAccountId(account_id));
+        // }
 }

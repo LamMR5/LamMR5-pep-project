@@ -33,18 +33,24 @@ public class MessageService {
     }
 }
 public Message getMessagebyID(int message_id) {
+    
+    
     return messageDAO.getMessageByID(message_id);
-
+    
 }
 public Message deleteMessagebyID(int message_id) {
     return messageDAO.deleteMessageByID(message_id);
 
 }
    
-    public List<Message> getAllMessages() {
-       return messageDAO.getAllMessages();
-    
-    }
+public List<Message> getAllMessages() {
+    return messageDAO.getAllMessages();
+
+}
+
+// public List<Message> getMessagesByAccountId(int account_id) {
+//     return messageDAO.getMessagesByAccountId(account_id);
+// }
 
 
     // public Object getAllMessages() {
